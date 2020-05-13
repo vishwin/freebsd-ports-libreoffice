@@ -5,8 +5,9 @@
 MASTER_SITES=	https://download.documentfoundation.org/libreoffice/src/${PORTVERSION}/ \
 		https://dev-www.libreoffice.org/src/:src \
 		https://dev-www.libreoffice.org/extern/:ext
-DISTFILES=	${PORTNAME}-${DISTVERSION}${DISTVERSIONSUFFIX}${EXTRACT_SUFX} \
-		${PORTNAME}-help-${DISTVERSION}${DISTVERSIONSUFFIX}${EXTRACT_SUFX}
+DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.[abr][1-9]$//1}${DISTVERSIONSUFFIX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		${PORTNAME}-help-${PORTVERSION:C/\.[abr][1-9]$//1}${DISTVERSIONSUFFIX}${EXTRACT_SUFX}
 DIST_SUBDIR=	libreoffice
 EXTRACT_ONLY:=	${DISTFILES}
 
